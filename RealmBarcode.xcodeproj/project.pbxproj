@@ -14,6 +14,9 @@
 		8BC438D02066162700B71A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC438CE2066162700B71A60 /* LaunchScreen.storyboard */; };
 		8BC438DB2066162800B71A60 /* RealmBarcodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC438DA2066162800B71A60 /* RealmBarcodeTests.swift */; };
 		8BC438E62066162800B71A60 /* RealmBarcodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC438E52066162800B71A60 /* RealmBarcodeUITests.swift */; };
+		9A7E44F137DD4ABB99660355 /* Pods_RealmBarcodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8455CAA6864D6E7423E487A4 /* Pods_RealmBarcodeUITests.framework */; };
+		C5957AF8927C4012287921F3 /* Pods_RealmBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397C37CF14DCEB95BF1F8C2D /* Pods_RealmBarcode.framework */; };
+		F4C8875BBA0BDDA80CC2FD61 /* Pods_RealmBarcodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0330BEE9BB27706D965E23E4 /* Pods_RealmBarcodeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0330BEE9BB27706D965E23E4 /* Pods_RealmBarcodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmBarcodeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		397C37CF14DCEB95BF1F8C2D /* Pods_RealmBarcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmBarcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A311E0C28CC6363DA384769 /* Pods-RealmBarcodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeUITests/Pods-RealmBarcodeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6D7A610C1C5DB3A7FD3E715C /* Pods-RealmBarcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcode.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode.release.xcconfig"; sourceTree = "<group>"; };
+		8455CAA6864D6E7423E487A4 /* Pods_RealmBarcodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmBarcodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89783E392AD8A116110AD04D /* Pods-RealmBarcodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeTests/Pods-RealmBarcodeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BC438C22066162700B71A60 /* RealmBarcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmBarcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC438C52066162700B71A60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BC438C72066162700B71A60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		8BC438E12066162800B71A60 /* RealmBarcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmBarcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC438E52066162800B71A60 /* RealmBarcodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmBarcodeUITests.swift; sourceTree = "<group>"; };
 		8BC438E72066162800B71A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA6CC5A033633EA828FDB556 /* Pods-RealmBarcodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeTests/Pods-RealmBarcodeTests.release.xcconfig"; sourceTree = "<group>"; };
+		C86B398624165ABCE74C1BB7 /* Pods-RealmBarcodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeUITests/Pods-RealmBarcodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F120E06CBA35B54BD49642 /* Pods-RealmBarcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5957AF8927C4012287921F3 /* Pods_RealmBarcode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C8875BBA0BDDA80CC2FD61 /* Pods_RealmBarcodeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7E44F137DD4ABB99660355 /* Pods_RealmBarcodeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B347C6F8DCE29D2C79B843F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3F120E06CBA35B54BD49642 /* Pods-RealmBarcode.debug.xcconfig */,
+				6D7A610C1C5DB3A7FD3E715C /* Pods-RealmBarcode.release.xcconfig */,
+				89783E392AD8A116110AD04D /* Pods-RealmBarcodeTests.debug.xcconfig */,
+				AA6CC5A033633EA828FDB556 /* Pods-RealmBarcodeTests.release.xcconfig */,
+				C86B398624165ABCE74C1BB7 /* Pods-RealmBarcodeUITests.debug.xcconfig */,
+				4A311E0C28CC6363DA384769 /* Pods-RealmBarcodeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8BC438B92066162700B71A60 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				8BC438D92066162800B71A60 /* RealmBarcodeTests */,
 				8BC438E42066162800B71A60 /* RealmBarcodeUITests */,
 				8BC438C32066162700B71A60 /* Products */,
+				8B347C6F8DCE29D2C79B843F /* Pods */,
+				BB87ABCD4379D8D5567034F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = RealmBarcodeUITests;
 			sourceTree = "<group>";
 		};
+		BB87ABCD4379D8D5567034F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				397C37CF14DCEB95BF1F8C2D /* Pods_RealmBarcode.framework */,
+				0330BEE9BB27706D965E23E4 /* Pods_RealmBarcodeTests.framework */,
+				8455CAA6864D6E7423E487A4 /* Pods_RealmBarcodeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BC438EA2066162800B71A60 /* Build configuration list for PBXNativeTarget "RealmBarcode" */;
 			buildPhases = (
+				495FADB71FD71CDD39C5931C /* [CP] Check Pods Manifest.lock */,
 				8BC438BE2066162700B71A60 /* Sources */,
 				8BC438BF2066162700B71A60 /* Frameworks */,
 				8BC438C02066162700B71A60 /* Resources */,
+				6968D523904CC6E721B48357 /* [CP] Embed Pods Frameworks */,
+				FAFBAC8B54AE2A7F25DF6307 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BC438ED2066162800B71A60 /* Build configuration list for PBXNativeTarget "RealmBarcodeTests" */;
 			buildPhases = (
+				44A7887FEBD1B7843379BF05 /* [CP] Check Pods Manifest.lock */,
 				8BC438D22066162800B71A60 /* Sources */,
 				8BC438D32066162800B71A60 /* Frameworks */,
 				8BC438D42066162800B71A60 /* Resources */,
+				0488855619D60F5C3E13A6D2 /* [CP] Embed Pods Frameworks */,
+				B0F741CB03A37F5E5B5E406A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BC438F02066162800B71A60 /* Build configuration list for PBXNativeTarget "RealmBarcodeUITests" */;
 			buildPhases = (
+				C0193F331645EE043086680D /* [CP] Check Pods Manifest.lock */,
 				8BC438DD2066162800B71A60 /* Sources */,
 				8BC438DE2066162800B71A60 /* Frameworks */,
 				8BC438DF2066162800B71A60 /* Resources */,
+				6A25956DC75A21CD2A75604F /* [CP] Embed Pods Frameworks */,
+				9B063E184FA59BCF5674274D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0488855619D60F5C3E13A6D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeTests/Pods-RealmBarcodeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44A7887FEBD1B7843379BF05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmBarcodeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		495FADB71FD71CDD39C5931C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmBarcode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6968D523904CC6E721B48357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A25956DC75A21CD2A75604F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeUITests/Pods-RealmBarcodeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B063E184FA59BCF5674274D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeUITests/Pods-RealmBarcodeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0F741CB03A37F5E5B5E406A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeTests/Pods-RealmBarcodeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0193F331645EE043086680D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmBarcodeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAFBAC8B54AE2A7F25DF6307 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BC438BE2066162700B71A60 /* Sources */ = {
@@ -424,6 +625,7 @@
 		};
 		8BC438EB2066162800B71A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F120E06CBA35B54BD49642 /* Pods-RealmBarcode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +641,7 @@
 		};
 		8BC438EC2066162800B71A60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7A610C1C5DB3A7FD3E715C /* Pods-RealmBarcode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +657,7 @@
 		};
 		8BC438EE2066162800B71A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89783E392AD8A116110AD04D /* Pods-RealmBarcodeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +675,7 @@
 		};
 		8BC438EF2066162800B71A60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6CC5A033633EA828FDB556 /* Pods-RealmBarcodeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +693,7 @@
 		};
 		8BC438F12066162800B71A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C86B398624165ABCE74C1BB7 /* Pods-RealmBarcodeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +710,7 @@
 		};
 		8BC438F22066162800B71A60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A311E0C28CC6363DA384769 /* Pods-RealmBarcodeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
