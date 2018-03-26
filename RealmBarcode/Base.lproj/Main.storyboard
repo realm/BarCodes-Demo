@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YzB-0j-iu7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="TBD-lJ-N7u">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="YzB-0j-iu7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nIt-m1-1ov">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jhc-GD-rHN" kind="relationship" relationship="rootViewController" id="wkk-gQ-hyv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcr-qN-cV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930" y="596"/>
+        </scene>
+        <!--Item List View-->
+        <scene sceneID="h9i-ix-PjD">
+            <objects>
+                <viewController storyboardIdentifier="itemListView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jhc-GD-rHN" userLabel="Item List View" customClass="ItemsViewController" customModule="RealmBarcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R02-06-Wna">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kcz-0Z-koE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kcz-0Z-koE" firstAttribute="leading" secondItem="Ncz-ET-zmW" secondAttribute="leading" id="32N-cR-cpB"/>
+                            <constraint firstItem="Kcz-0Z-koE" firstAttribute="bottom" secondItem="Ncz-ET-zmW" secondAttribute="bottom" id="5cP-vN-dd2"/>
+                            <constraint firstItem="Kcz-0Z-koE" firstAttribute="trailing" secondItem="Ncz-ET-zmW" secondAttribute="trailing" id="gxf-eX-DWl"/>
+                            <constraint firstItem="Kcz-0Z-koE" firstAttribute="top" secondItem="Ncz-ET-zmW" secondAttribute="top" id="u7b-WL-0rt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ncz-ET-zmW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D7X-Hc-WkH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="f4T-ra-bam">
+                            <connections>
+                                <segue destination="hVQ-xT-l6p" kind="popoverPresentation" identifier="showScannerSegue" popoverAnchorBarButtonItem="f4T-ra-bam" id="VeI-dj-Skg">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="f4T-ra-bam" id="m6s-WK-1oc"/>
+                        <outlet property="tableView" destination="Kcz-0Z-koE" id="sme-Zt-TWE"/>
+                        <segue destination="2cu-ia-YCp" kind="showDetail" identifier="showDetailSegue" id="67B-mL-npp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDp-90-0F2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="595.95202398800609"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="TUA-Ig-0TF">
+            <objects>
+                <viewController id="hVQ-xT-l6p" customClass="ScannerViewController" customModule="RealmBarcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nsP-fO-1v4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzZ-YA-lgR">
+                                <rect key="frame" x="67" y="158" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYL-GB-C0p">
+                                <rect key="frame" x="67" y="454" width="240" height="30"/>
+                                <state key="normal" title="Re-Scan"/>
+                                <connections>
+                                    <action selector="scanActionButtonTapped:" destination="hVQ-xT-l6p" eventType="touchUpInside" id="S5g-Nb-b8y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vr-LT-Dbd">
+                                <rect key="frame" x="67" y="406" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sf-j1-c1a">
+                                <rect key="frame" x="67" y="492" width="240" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="hVQ-xT-l6p" eventType="touchUpInside" id="1GB-o3-Zpq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="centerX" secondItem="nsP-fO-1v4" secondAttribute="centerX" id="6cY-Hk-aof"/>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="trailing" secondItem="5vr-LT-Dbd" secondAttribute="trailing" id="9SB-m9-XBl"/>
+                            <constraint firstItem="4sf-j1-c1a" firstAttribute="top" secondItem="TYL-GB-C0p" secondAttribute="bottom" constant="8" id="AU1-os-bHu"/>
+                            <constraint firstItem="FnE-Ey-B4l" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4sf-j1-c1a" secondAttribute="bottom" constant="145" id="IdM-AV-Cyo"/>
+                            <constraint firstItem="TYL-GB-C0p" firstAttribute="top" secondItem="5vr-LT-Dbd" secondAttribute="bottom" constant="27" id="P9u-C7-uJ9"/>
+                            <constraint firstItem="FnE-Ey-B4l" firstAttribute="bottom" secondItem="4sf-j1-c1a" secondAttribute="bottom" constant="145" id="PFb-C9-hsx"/>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="top" secondItem="FnE-Ey-B4l" secondAttribute="top" constant="138" id="Vky-k5-WCF"/>
+                            <constraint firstItem="5vr-LT-Dbd" firstAttribute="trailing" secondItem="TYL-GB-C0p" secondAttribute="trailing" id="W8V-gV-MMf"/>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="leading" secondItem="5vr-LT-Dbd" secondAttribute="leading" id="Ymf-Oz-eMy"/>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="leading" secondItem="FnE-Ey-B4l" secondAttribute="leading" constant="67" id="gvd-ld-GwX"/>
+                            <constraint firstItem="5vr-LT-Dbd" firstAttribute="top" secondItem="MzZ-YA-lgR" secondAttribute="bottom" constant="8" symbolic="YES" id="kff-ej-Hi8"/>
+                            <constraint firstItem="4sf-j1-c1a" firstAttribute="leading" secondItem="TYL-GB-C0p" secondAttribute="leading" id="lnP-4R-pQa"/>
+                            <constraint firstItem="5vr-LT-Dbd" firstAttribute="leading" secondItem="TYL-GB-C0p" secondAttribute="leading" id="rr6-Kd-jQz"/>
+                            <constraint firstItem="4sf-j1-c1a" firstAttribute="trailing" secondItem="TYL-GB-C0p" secondAttribute="trailing" id="uuC-5a-wTO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FnE-Ey-B4l"/>
+                    </view>
+                    <connections>
+                        <outlet property="cencelButton" destination="4sf-j1-c1a" id="2Uw-0U-9iK"/>
+                        <outlet property="scanActionButton" destination="TYL-GB-C0p" id="afu-WC-C4c"/>
+                        <outlet property="scannedIDLabel" destination="5vr-LT-Dbd" id="nwg-6B-px1"/>
+                        <outlet property="scannerView" destination="MzZ-YA-lgR" id="iRe-cD-rc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YW9-EK-b4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.60000000000002" y="-158.77061469265368"/>
+        </scene>
+        <!--Item Detail View-->
+        <scene sceneID="khx-bf-DMl">
+            <objects>
+                <viewController storyboardIdentifier="itemDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2cu-ia-YCp" userLabel="Item Detail View" customClass="ItemDetailViewController" customModule="RealmBarcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZl-zh-xDx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tkS-Xi-Nda"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzo-pI-Yqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="929" y="596"/>
         </scene>
     </scenes>
 </document>

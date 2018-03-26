@@ -1,17 +1,25 @@
 PODS:
-  - Realm (3.1.1):
-    - Realm/Headers (= 3.1.1)
-  - Realm/Headers (3.1.1)
-  - RealmSwift (3.1.1):
-    - Realm (= 3.1.1)
+  - Eureka (4.1.1)
+  - ImageRow (3.0.0):
+    - Eureka (~> 4.0)
+  - Realm (3.3.0):
+    - Realm/Headers (= 3.3.0)
+  - Realm/Headers (3.3.0)
+  - RealmSwift (3.3.0):
+    - Realm (= 3.3.0)
 
 DEPENDENCIES:
+  - Eureka
+  - ImageRow
+  - Realm
   - RealmSwift
 
 SPEC CHECKSUMS:
-  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
-  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
+  Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
+  ImageRow: 048123c296de9a6ac3998c415a6706c45ce480af
+  Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
+  RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
 
-PODFILE CHECKSUM: 171ff0d3769de3376c21df93189eec011b1e8444
+PODFILE CHECKSUM: d53281c8e2e40a0e9f474efa97d649037677d8cd
 
 COCOAPODS: 1.4.0

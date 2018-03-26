@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B8C0A962066228C0063859D /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0A932066228C0063859D /* ItemsViewController.swift */; };
+		8B8C0A98206629FA0063859D /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0A97206629FA0063859D /* ItemDetailViewController.swift */; };
+		8B8C0A9A20662A0A0063859D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0A9920662A0A0063859D /* ScannerViewController.swift */; };
+		8B8C0A9C20662BEC0063859D /* ItemsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0A9B20662BEC0063859D /* ItemsViewController+UITableViewDelegate.swift */; };
+		8B8C0A9E20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0A9D20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift */; };
+		8B8C0AA020662EAC0063859D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0A9F20662EAC0063859D /* Models.swift */; };
+		8B8C0AA420663BFE0063859D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C0AA320663BFE0063859D /* Constants.swift */; };
 		8BC438C62066162700B71A60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC438C52066162700B71A60 /* AppDelegate.swift */; };
-		8BC438C82066162700B71A60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC438C72066162700B71A60 /* ViewController.swift */; };
 		8BC438CB2066162700B71A60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC438C92066162700B71A60 /* Main.storyboard */; };
 		8BC438CD2066162700B71A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC438CC2066162700B71A60 /* Assets.xcassets */; };
 		8BC438D02066162700B71A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC438CE2066162700B71A60 /* LaunchScreen.storyboard */; };
@@ -43,9 +49,15 @@
 		6D7A610C1C5DB3A7FD3E715C /* Pods-RealmBarcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcode.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode.release.xcconfig"; sourceTree = "<group>"; };
 		8455CAA6864D6E7423E487A4 /* Pods_RealmBarcodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmBarcodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89783E392AD8A116110AD04D /* Pods-RealmBarcodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeTests/Pods-RealmBarcodeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B8C0A932066228C0063859D /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		8B8C0A97206629FA0063859D /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		8B8C0A9920662A0A0063859D /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		8B8C0A9B20662BEC0063859D /* ItemsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		8B8C0A9D20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsViewController+UITableViewDatasource.swift"; sourceTree = "<group>"; };
+		8B8C0A9F20662EAC0063859D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Models.swift; path = RealmBarcode/Models.swift; sourceTree = SOURCE_ROOT; };
+		8B8C0AA320663BFE0063859D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8BC438C22066162700B71A60 /* RealmBarcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmBarcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC438C52066162700B71A60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BC438C72066162700B71A60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BC438CA2066162700B71A60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BC438CC2066162700B71A60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BC438CF2066162700B71A60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +114,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8B8C0A912066228C0063859D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C0A922066228C0063859D /* ItemList */,
+				8B8C0A942066228C0063859D /* ItemDetail */,
+				8B8C0A952066228C0063859D /* Scanner */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B8C0A922066228C0063859D /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C0A9B20662BEC0063859D /* ItemsViewController+UITableViewDelegate.swift */,
+				8B8C0A9D20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift */,
+				8B8C0A932066228C0063859D /* ItemsViewController.swift */,
+				8B8C0A9F20662EAC0063859D /* Models.swift */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
+		8B8C0A942066228C0063859D /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C0A97206629FA0063859D /* ItemDetailViewController.swift */,
+			);
+			path = ItemDetail;
+			sourceTree = "<group>";
+		};
+		8B8C0A952066228C0063859D /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C0A9920662A0A0063859D /* ScannerViewController.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
 		8BC438B92066162700B71A60 = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +176,9 @@
 		8BC438C42066162700B71A60 /* RealmBarcode */ = {
 			isa = PBXGroup;
 			children = (
+				8B8C0A912066228C0063859D /* Views */,
 				8BC438C52066162700B71A60 /* AppDelegate.swift */,
-				8BC438C72066162700B71A60 /* ViewController.swift */,
+				8B8C0AA320663BFE0063859D /* Constants.swift */,
 				8BC438C92066162700B71A60 /* Main.storyboard */,
 				8BC438CC2066162700B71A60 /* Assets.xcassets */,
 				8BC438CE2066162700B71A60 /* LaunchScreen.storyboard */,
@@ -362,11 +412,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageRow/ImageRow.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageRow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -460,8 +514,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BC438C82066162700B71A60 /* ViewController.swift in Sources */,
+				8B8C0A9E20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift in Sources */,
 				8BC438C62066162700B71A60 /* AppDelegate.swift in Sources */,
+				8B8C0A962066228C0063859D /* ItemsViewController.swift in Sources */,
+				8B8C0A98206629FA0063859D /* ItemDetailViewController.swift in Sources */,
+				8B8C0A9A20662A0A0063859D /* ScannerViewController.swift in Sources */,
+				8B8C0A9C20662BEC0063859D /* ItemsViewController+UITableViewDelegate.swift in Sources */,
+				8B8C0AA020662EAC0063859D /* Models.swift in Sources */,
+				8B8C0AA420663BFE0063859D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
