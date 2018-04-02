@@ -9,11 +9,11 @@
 - [Cocoapods](https://www.cocoapods.org) version 1.4.x or higher
 - [ROS](https://realm.io/products) version 3.0.0 or huigher, installed via NPM
 - [NPM and nodejs](https://www.npmjs.com/get-npm)
-- [YARN](https://yarnpkg.com/en/) s fasdster nodejs dependency manager
+- [YARN](https://yarnpkg.com/en/) a faster nodejs dependency manager
 
 
 
-![BarcodeDemo ](/Graphics/screenshot.PNG)
+![BarcodeDemo ](/Graphics/barcode-demo.png)
 
 ### Server Description
 
