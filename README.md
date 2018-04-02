@@ -27,6 +27,7 @@
 
 As delivered this demo is designed to alow the user to utilize a ROS server on their local (build) machine. This is accomplished by determining the local machine's IP address at build time and storing the address in a file that is used to allow the client app to talk to the local server. Additionally,  this demo server uses the Realm `Nickname` auth mechanism  in order to remove the need to write login logic for this simple example.
 
+<center> <img src="Graphics/barcode-studio.png" /><br/>Barcode Demo</center><br>
 
 ### Client Description
 
