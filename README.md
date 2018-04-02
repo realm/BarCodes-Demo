@@ -15,17 +15,13 @@
 - [YARN](https://yarnpkg.com/en/) a faster nodejs dependency manager
 
 
-
 #### Bugs / ToDo
-   - Fix `#Selector` unrecognized  issue with edting the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
 
-    - Get the `AVPreviewLayer` to correctly fill its enclosing view 
-  
-    - Add Item detail view using Eiureks to alow efiting of current item product descriptions
-  
-  
-  
+- Fix `#Selector` unrecognized  issue with edting the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
 
+- Get the `AVPreviewLayer` to correctly fill its enclosing view 
+  
+- Add Item detail view using Eiureks to alow efiting of current item product descriptions
 
 ### Server Description
 
