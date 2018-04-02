@@ -22,32 +22,28 @@ class ItemDetailViewController: FormViewController {
         itemRecord = realm?.object(ofType: Item.self, forPrimaryKey: itemId)
         form = createForm()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
     
     func createForm() -> Form {
         
         let form = Form()
         
         form +++ Section()
-            <<< LabelRow(NSLocalizedString("Barcode Value", comment: "Barcode Value")){ row in
+            <<< LabelRow(){ row in
                 row.title = NSLocalizedString("Barcode Value", comment: "Barcode Value")
                 row.value = itemRecord?.id
                 row.disabled = true
                 }.cellUpdate({ (cell, row) in
                     cell.textLabel?.textAlignment = .center
                 })
-        
-            <<< LabelRow(NSLocalizedString("Product Description", comment: "Product Description")){ row in
+            
+            <<< LabelRow(){ row in
                 row.title = NSLocalizedString("Product Description", comment: "Product Description")
-                    row.value = self.itemRecord?.productDescription
-                row.disabled = false
+                row.value = self.itemRecord?.productDescription
                 }.cellUpdate({ (cell, row) in
                     cell.textLabel?.textAlignment = .center
                 }).onChange({ (row) in
@@ -55,7 +51,7 @@ class ItemDetailViewController: FormViewController {
                         self.itemRecord?.productDescription = row.value ?? ""
                     }
                 })
-        
+            
             <<< DateRow(){ row in
                 row.disabled = true
                 row.title = NSLocalizedString("Creation Date", comment: "Creation Date")
@@ -64,9 +60,9 @@ class ItemDetailViewController: FormViewController {
                 formatter.locale = .current
                 formatter.dateStyle = .long
                 row.dateFormatter = formatter
-                }
-        
-        
+            }
+            
+            
             <<< DateRow(){ row in
                 row.disabled = true
                 row.title = NSLocalizedString("Last Upated", comment: "Last Upated")
@@ -76,18 +72,21 @@ class ItemDetailViewController: FormViewController {
                 formatter.dateStyle = .long
                 row.dateFormatter = formatter
         }
-
+        
         return form
     }
+    
+    //            _ = self.navigationController?.popViewController(animated: true)
 
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
