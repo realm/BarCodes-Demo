@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcr-qN-cV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-930" y="596"/>
+            <point key="canvasLocation" x="-927" y="615"/>
         </scene>
         <!--Item List View-->
         <scene sceneID="h9i-ix-PjD">
@@ -86,12 +86,12 @@
                     <connections>
                         <outlet property="addButton" destination="f4T-ra-bam" id="m6s-WK-1oc"/>
                         <outlet property="tableView" destination="Kcz-0Z-koE" id="sme-Zt-TWE"/>
-                        <segue destination="2cu-ia-YCp" kind="showDetail" identifier="showDetailSegue" id="67B-mL-npp"/>
+                        <segue destination="2cu-ia-YCp" kind="show" identifier="showDetailSegue" id="67B-mL-npp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDp-90-0F2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="595.95202398800609"/>
+            <point key="canvasLocation" x="-10" y="615"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="TUA-Ig-0TF">
@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzo-pI-Yqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="596"/>
+            <point key="canvasLocation" x="929" y="615"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

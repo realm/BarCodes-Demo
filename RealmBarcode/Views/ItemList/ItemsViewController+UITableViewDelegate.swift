@@ -10,6 +10,6 @@ import UIKit
 extension ItemsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // perform segue to the detail view for this item.
+        performSegue(withIdentifier: "showDetailSegue", sender: nil)
     }
 }

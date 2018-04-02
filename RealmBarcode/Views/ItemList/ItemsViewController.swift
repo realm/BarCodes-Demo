@@ -116,10 +116,23 @@ class ItemsViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showScannerSegue" {
+        switch segue.identifier {
+        case "showScannerSegue":
             if let vc = segue.destination as? ScannerViewController {
                 vc.realm = realm
             }
+            
+        case "showDetailSegue":
+            if let vc = segue.destination as? ItemDetailViewController {
+                let indexPath = tableView.indexPathForSelectedRow
+                if let item = self.items?[(indexPath?.row)!] {
+                    vc.realm = realm
+                    vc.itemId = item.id
+                }
+            }
+
+        default:
+            break
         }
     } // of prepareForSegue
 
