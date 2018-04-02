@@ -11,6 +11,7 @@ import RealmSwift
 
 class ItemDetailViewController: UIViewController {
     var realm: Realm?
+    var itemId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

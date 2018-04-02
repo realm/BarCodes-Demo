@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YzB-0j-iu7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YzB-0j-iu7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,24 +76,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzZ-YA-lgR">
-                                <rect key="frame" x="67" y="158" width="240" height="240"/>
+                                <rect key="frame" x="16" y="20" width="343" height="379"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYL-GB-C0p">
-                                <rect key="frame" x="67" y="454" width="240" height="30"/>
-                                <state key="normal" title="Re-Scan"/>
-                                <connections>
-                                    <action selector="scanActionButtonTapped:" destination="hVQ-xT-l6p" eventType="touchUpInside" id="S5g-Nb-b8y"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vr-LT-Dbd">
-                                <rect key="frame" x="67" y="406" width="240" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sf-j1-c1a">
-                                <rect key="frame" x="67" y="492" width="240" height="30"/>
+                                <rect key="frame" x="16" y="407" width="343" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="hVQ-xT-l6p" eventType="touchUpInside" id="1GB-o3-Zpq"/>
@@ -103,32 +90,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MzZ-YA-lgR" firstAttribute="centerX" secondItem="nsP-fO-1v4" secondAttribute="centerX" id="6cY-Hk-aof"/>
-                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="trailing" secondItem="5vr-LT-Dbd" secondAttribute="trailing" id="9SB-m9-XBl"/>
-                            <constraint firstItem="4sf-j1-c1a" firstAttribute="top" secondItem="TYL-GB-C0p" secondAttribute="bottom" constant="8" id="AU1-os-bHu"/>
                             <constraint firstItem="FnE-Ey-B4l" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4sf-j1-c1a" secondAttribute="bottom" constant="145" id="IdM-AV-Cyo"/>
-                            <constraint firstItem="TYL-GB-C0p" firstAttribute="top" secondItem="5vr-LT-Dbd" secondAttribute="bottom" constant="27" id="P9u-C7-uJ9"/>
-                            <constraint firstItem="FnE-Ey-B4l" firstAttribute="bottom" secondItem="4sf-j1-c1a" secondAttribute="bottom" constant="145" id="PFb-C9-hsx"/>
-                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="top" secondItem="FnE-Ey-B4l" secondAttribute="top" constant="138" id="Vky-k5-WCF"/>
-                            <constraint firstItem="5vr-LT-Dbd" firstAttribute="trailing" secondItem="TYL-GB-C0p" secondAttribute="trailing" id="W8V-gV-MMf"/>
-                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="leading" secondItem="5vr-LT-Dbd" secondAttribute="leading" id="Ymf-Oz-eMy"/>
-                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="leading" secondItem="FnE-Ey-B4l" secondAttribute="leading" constant="67" id="gvd-ld-GwX"/>
-                            <constraint firstItem="5vr-LT-Dbd" firstAttribute="top" secondItem="MzZ-YA-lgR" secondAttribute="bottom" constant="8" symbolic="YES" id="kff-ej-Hi8"/>
-                            <constraint firstItem="4sf-j1-c1a" firstAttribute="leading" secondItem="TYL-GB-C0p" secondAttribute="leading" id="lnP-4R-pQa"/>
-                            <constraint firstItem="5vr-LT-Dbd" firstAttribute="leading" secondItem="TYL-GB-C0p" secondAttribute="leading" id="rr6-Kd-jQz"/>
-                            <constraint firstItem="4sf-j1-c1a" firstAttribute="trailing" secondItem="TYL-GB-C0p" secondAttribute="trailing" id="uuC-5a-wTO"/>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="top" secondItem="FnE-Ey-B4l" secondAttribute="top" id="K6b-Bn-El9"/>
+                            <constraint firstItem="FnE-Ey-B4l" firstAttribute="trailing" secondItem="MzZ-YA-lgR" secondAttribute="trailing" constant="16" id="KWa-FH-Mka"/>
+                            <constraint firstItem="FnE-Ey-B4l" firstAttribute="bottom" secondItem="4sf-j1-c1a" secondAttribute="bottom" constant="230" id="RvB-Ue-crQ"/>
+                            <constraint firstAttribute="trailing" secondItem="4sf-j1-c1a" secondAttribute="trailing" constant="16" id="UuO-5C-jr8"/>
+                            <constraint firstItem="4sf-j1-c1a" firstAttribute="top" secondItem="MzZ-YA-lgR" secondAttribute="bottom" constant="8" id="fbY-Cu-wj7"/>
+                            <constraint firstItem="4sf-j1-c1a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MzZ-YA-lgR" secondAttribute="leading" id="lSv-7Y-2gY"/>
+                            <constraint firstItem="MzZ-YA-lgR" firstAttribute="leading" secondItem="FnE-Ey-B4l" secondAttribute="leading" constant="16" id="oiY-G2-WRN"/>
+                            <constraint firstItem="4sf-j1-c1a" firstAttribute="width" secondItem="MzZ-YA-lgR" secondAttribute="width" id="vBZ-S6-TCA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FnE-Ey-B4l"/>
                     </view>
                     <connections>
                         <outlet property="cencelButton" destination="4sf-j1-c1a" id="2Uw-0U-9iK"/>
-                        <outlet property="scanActionButton" destination="TYL-GB-C0p" id="afu-WC-C4c"/>
-                        <outlet property="scannedIDLabel" destination="5vr-LT-Dbd" id="nwg-6B-px1"/>
                         <outlet property="scannerView" destination="MzZ-YA-lgR" id="iRe-cD-rc8"/>
+                        <segue destination="2cu-ia-YCp" kind="show" identifier="scannerToDetailSegue" id="FbH-Tk-xUL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YW9-EK-b4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765.60000000000002" y="-158.77061469265368"/>
+            <point key="canvasLocation" x="929" y="-165"/>
         </scene>
         <!--Item Detail View-->
         <scene sceneID="khx-bf-DMl">
@@ -146,4 +128,7 @@
             <point key="canvasLocation" x="929" y="596"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FbH-Tk-xUL"/>
+    </inferredMetricsTieBreakers>
 </document>

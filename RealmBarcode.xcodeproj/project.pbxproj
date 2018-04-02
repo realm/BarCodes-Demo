@@ -20,6 +20,8 @@
 		8BC438D02066162700B71A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC438CE2066162700B71A60 /* LaunchScreen.storyboard */; };
 		8BC438DB2066162800B71A60 /* RealmBarcodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC438DA2066162800B71A60 /* RealmBarcodeTests.swift */; };
 		8BC438E62066162800B71A60 /* RealmBarcodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC438E52066162800B71A60 /* RealmBarcodeUITests.swift */; };
+		8BE2250A2069B30900417A2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8BE225092069B30900417A2B /* README.md */; };
+		8BE2250D2069EADD00417A2B /* LocalIPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE2250C2069EADD00417A2B /* LocalIPAddress.swift */; };
 		9A7E44F137DD4ABB99660355 /* Pods_RealmBarcodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8455CAA6864D6E7423E487A4 /* Pods_RealmBarcodeUITests.framework */; };
 		C5957AF8927C4012287921F3 /* Pods_RealmBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397C37CF14DCEB95BF1F8C2D /* Pods_RealmBarcode.framework */; };
 		F4C8875BBA0BDDA80CC2FD61 /* Pods_RealmBarcodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0330BEE9BB27706D965E23E4 /* Pods_RealmBarcodeTests.framework */; };
@@ -68,6 +70,8 @@
 		8BC438E12066162800B71A60 /* RealmBarcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmBarcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC438E52066162800B71A60 /* RealmBarcodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmBarcodeUITests.swift; sourceTree = "<group>"; };
 		8BC438E72066162800B71A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE225092069B30900417A2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8BE2250C2069EADD00417A2B /* LocalIPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalIPAddress.swift; sourceTree = "<group>"; };
 		AA6CC5A033633EA828FDB556 /* Pods-RealmBarcodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeTests/Pods-RealmBarcodeTests.release.xcconfig"; sourceTree = "<group>"; };
 		C86B398624165ABCE74C1BB7 /* Pods-RealmBarcodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeUITests/Pods-RealmBarcodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F120E06CBA35B54BD49642 /* Pods-RealmBarcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcode/Pods-RealmBarcode.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +134,6 @@
 				8B8C0A9B20662BEC0063859D /* ItemsViewController+UITableViewDelegate.swift */,
 				8B8C0A9D20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift */,
 				8B8C0A932066228C0063859D /* ItemsViewController.swift */,
-				8B8C0A9F20662EAC0063859D /* Models.swift */,
 			);
 			path = ItemList;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 		8BC438B92066162700B71A60 = {
 			isa = PBXGroup;
 			children = (
+				8BE225092069B30900417A2B /* README.md */,
 				8BC438C42066162700B71A60 /* RealmBarcode */,
 				8BC438D92066162800B71A60 /* RealmBarcodeTests */,
 				8BC438E42066162800B71A60 /* RealmBarcodeUITests */,
@@ -176,6 +180,8 @@
 		8BC438C42066162700B71A60 /* RealmBarcode */ = {
 			isa = PBXGroup;
 			children = (
+				8B8C0A9F20662EAC0063859D /* Models.swift */,
+				8BE2250C2069EADD00417A2B /* LocalIPAddress.swift */,
 				8B8C0A912066228C0063859D /* Views */,
 				8BC438C52066162700B71A60 /* AppDelegate.swift */,
 				8B8C0AA320663BFE0063859D /* Constants.swift */,
@@ -222,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BC438EA2066162800B71A60 /* Build configuration list for PBXNativeTarget "RealmBarcode" */;
 			buildPhases = (
+				8BE2250B2069E83E00417A2B /* Local IP Address */,
 				495FADB71FD71CDD39C5931C /* [CP] Check Pods Manifest.lock */,
 				8BC438BE2066162700B71A60 /* Sources */,
 				8BC438BF2066162700B71A60 /* Frameworks */,
@@ -333,6 +340,7 @@
 			files = (
 				8BC438D02066162700B71A60 /* LaunchScreen.storyboard in Resources */,
 				8BC438CD2066162700B71A60 /* Assets.xcassets in Resources */,
+				8BE2250A2069B30900417A2B /* README.md in Resources */,
 				8BC438CB2066162700B71A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +452,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeUITests/Pods-RealmBarcodeUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8BE2250B2069E83E00417A2B /* Local IP Address */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Local IP Address";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCAL_IP_ADDR=$(ipconfig getifaddr $(netstat -f inet -rant | awk '/default/ { print $6; exit }'))\necho \"let localIPAddress = \\\"$LOCAL_IP_ADDR\\\"\" > \"$SRCROOT/RealmBarcode/LocalIPAddress.swift\"";
+		};
 		9B063E184FA59BCF5674274D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,6 +538,7 @@
 			files = (
 				8B8C0A9E20662DDA0063859D /* ItemsViewController+UITableViewDatasource.swift in Sources */,
 				8BC438C62066162700B71A60 /* AppDelegate.swift in Sources */,
+				8BE2250D2069EADD00417A2B /* LocalIPAddress.swift in Sources */,
 				8B8C0A962066228C0063859D /* ItemsViewController.swift in Sources */,
 				8B8C0A98206629FA0063859D /* ItemDetailViewController.swift in Sources */,
 				8B8C0A9A20662A0A0063859D /* ScannerViewController.swift in Sources */,

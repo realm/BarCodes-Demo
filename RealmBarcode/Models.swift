@@ -19,5 +19,12 @@ class Item : Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-
-}
+    
+    func initWithID(_ id:String,  productDescription: String) {
+        let tmpDate = Date()
+        self.id = id
+        self.productDescription = productDescription
+        self.creationDate = tmpDate
+        self.lastUpdated = tmpDate
+    }
+}   // Item

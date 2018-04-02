@@ -11,12 +11,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-let PlaceholderImageTag = 162
-
-enum ScanButtonState : String {
-    case scan = "Scan"
-    case accept = "Accept"
-}
+let kMinItemNameLength = 5
 
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
@@ -28,8 +23,19 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureDevice:AVCaptureDevice?
     var captureSession: AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-    var buttonState: ScanButtonState = .scan
     
+    // UI Controls/Elements
+    @IBOutlet weak var scannerView: UIView!
+    @IBOutlet weak var cencelButton: UIButton!
+    
+    // Misc
+    // the "add" item in our new item dialog - this allows us to enable/disable
+    // inside the processing of the alertview controller
+    weak var AddAlertAction: UIAlertAction?
+    
+    var foundID = ""    // the most current bar/qr code we've scanned
+    
+    // the green frame we display around the barcode windown on a successful scan
     let codeFrame : UIView = {
         let codeFrame = UIView()
         codeFrame.layer.borderColor = UIColor.green.cgColor
@@ -40,37 +46,33 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }()
     
     
-    // UI Controls/Elements
-    @IBOutlet weak var scannerView: UIView!
-    @IBOutlet weak var scannedIDLabel: UILabel!
-    @IBOutlet weak var scanActionButton: UIButton!
-    @IBOutlet weak var cencelButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Scanner"
+        navigationItem.title = NSLocalizedString("Scanner", comment:"scanner")
         view.backgroundColor = .white
         
-        scannedIDLabel.text = NSLocalizedString("No Data", comment: "initial value")
-        
-        scannerView.backgroundColor = .lightGray
-        scannerView.layer.borderColor = UIColor.blue.cgColor
+        scannerView.backgroundColor = .clear
+        scannerView.layer.borderColor = UIColor.gray.cgColor
         scannerView.layer.borderWidth = 0.75
-        scannerView.contentMode = .scaleAspectFit
-        
-        scanActionButton.setTitle(NSLocalizedString(buttonState.rawValue, comment: "scan, or accept"), for: .normal)
-        
+
         captureDevice = AVCaptureDevice.default(for: .video)
         if let captureDevice = captureDevice {
-           self.captureSession =  setupScanner(captureDevice)
-        } //  if/let
+            self.captureSession =  setupScanner(captureDevice)
+        }
     } // viewDidLoad
     
     
     override func viewWillAppear(_ animated: Bool) {
-        resetScannerView()
+        stopScanning()
+        startScanning()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        stopScanning()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,8 +95,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             captureMetadataOutput.metadataObjectTypes = [.code128, .qr, .ean13,  .ean8, .code39]
             
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+            videoPreviewLayer?.frame = self.scannerView.layer.bounds
+            videoPreviewLayer?.contentsCenter = self.scannerView.layer.contentsCenter
             videoPreviewLayer?.videoGravity = .resizeAspectFill
-            videoPreviewLayer?.frame = scannerView.layer.bounds
+
             scannerView.layer.addSublayer(videoPreviewLayer!)
         } catch {
             print("Error Device Input")
@@ -104,79 +108,47 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     
     fileprivate func startScanning() {
-        scanActionButton.isEnabled = false
         captureSession?.startRunning()
     }
     
-    fileprivate func resetScannerView() {
+    fileprivate func stopScanning() {
         captureSession?.stopRunning()
-        buttonState = .scan
-        scanActionButton.setTitle(NSLocalizedString(buttonState.rawValue, comment: "scan, or accept"), for: .normal)
     }
     
-    
-    
-    @IBAction func scanActionButtonTapped(_ sender: Any) {
-        switch buttonState {
-        case .scan:
-            self.startScanning()
-        case .accept:
-            print("need to process the accepted scan")
-        }
-        
-    }
-    
+    // MARK: Actions
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        if self.buttonState == .scan {
-            self.resetScannerView()
-            scanActionButton.isEnabled = true
-
-        } else {
-            self.dismiss(animated: true, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     // AVFoundation / Barcode utils
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects.count == 0 {
             codeFrame.frame = CGRect.zero
-            scannedIDLabel.text = NSLocalizedString("No Data", comment: "no data")
             return
         }
         
         let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         guard let stringCodeValue = metadataObject.stringValue else { return }
-
-        codeFrame.bounds = scannerView.bounds
         
+        //        codeFrame.bounds = scannerView.bounds
+        codeFrame.bounds = videoPreviewLayer!.bounds
         view.addSubview(codeFrame)
         
         guard let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) else { return }
         
-        let systemSoundId: SystemSoundID = 1016
-        AudioServicesAddSystemSoundCompletion(systemSoundId, nil, nil, { (customSoundId, _) -> Void in
-            AudioServicesDisposeSystemSoundID(customSoundId)
-        }, nil)
-        
-        AudioServicesPlaySystemSound(systemSoundId)
         scanDidSucceed(result: stringCodeValue)
     } // metadataOutput(output:metadataObjects)
     
     
     func scanDidSucceed(result: String) {
-        scannedIDLabel.text = result
         if entryExists(id: result) {
-            // just take the user to the record
+            foundID = result
             performSegue(withIdentifier: "showDetailSegue", sender: nil)
         } else {
-            // set the action button to "accept"
-            buttonState = .accept
-            scanActionButton.isEnabled = true
-            scanActionButton.setTitle(NSLocalizedString(buttonState.rawValue, comment: "scan, or accept"), for: .normal)
+            // show the found ID dialog; ask user if they wish to create a new record
+            self.showNewBarCodeAlert(withBarCode: result)
         }
-        
-
     } // scanDidSucceed
     
     func entryExists(id:String) -> Bool {
@@ -185,21 +157,69 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
         return realm?.object(ofType: Item.self, forPrimaryKey: id ) != nil
     } //entryExists
-
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    
+    
+    func showNewBarCodeAlert(withBarCode barCode: String) {
+        let alertController = UIAlertController(title: NSLocalizedString("New Barcode Detected", comment: "New Barcode Detected"),
+                                                message: NSLocalizedString("Add ID \"\(barCode)\"?", comment: "Add \(barCode)?"),
+                                                preferredStyle: .alert)
         
-        if segue.identifier == "" {
+        alertController.addTextField { (textField: UITextField) in
+            textField.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
+            textField.keyboardAppearance = .dark
+            textField.keyboardType = .default
+            textField.autocorrectionType = .default
+            textField.placeholder = "Name for this item..."
+            textField.clearButtonMode = .whileEditing
+        }
+        
+        
+        let addAction = UIAlertAction(title: "Add", style:
+            .default, handler: { (_) -> Void in
+                let itemName = alertController.textFields!.first!.text ?? "New Item Name"
+                self.addnewItemWithID(barCode, productDescription: itemName)
+                
+        })
+        
+        self.AddAlertAction = addAction
+        self.AddAlertAction?.isEnabled = false
+        alertController.addAction(self.AddAlertAction!)
+        
+        alertController.addAction(UIAlertAction(title: "Ignore", style: .cancel, handler:nil))
+        
+        present(alertController, animated: true, completion: nil)
+    } // presentNewBarcode
+    
+    
+    @objc func textDidChange(_ notification: NSNotification) {
+        let textField = notification.object as! UITextField
+        AddAlertAction!.isEnabled = (textField.text?.count)! >= kMinItemNameLength
+    } // textChanged
+    
+    
+    func addnewItemWithID(_ barCode: String, productDescription: String){
+        guard self.realm != nil else { return }
+        
+        try! realm?.write {
+            let tmpDate = Date()
+            let newItem = Item()
+            newItem.id = barCode
+            newItem.productDescription = productDescription
+            newItem.creationDate = tmpDate
+            newItem.lastUpdated = tmpDate
+            realm?.add(newItem, update: true)
+        }
+    } // addnewItemWithID
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "scannerToDetailSegue" {
             if let vc = segue.destination as? ItemDetailViewController {
                 vc.realm = realm
+                vc.itemId = self.foundID
             }
         }
-     // Get the new view controller using segue.destinationViewController.
-        
-        
-     // Pass the selected object to the new view controller.
-     }
-
-}
+    } // of prepareForSegue
+    
+} // of ScannerViewController
