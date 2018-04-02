@@ -3,7 +3,7 @@
 
 ## A Simple Barcode/QRCode Reader
 
-<center> <img src="Graphics/barcode-demo.png" width="310" height="552" /><br/>Barcode Demo</center><br>
+<center> <img src="Graphics/barcode-demo.png" width="310" height="552" /></center>
 
 ### Requirements
 - [Xcode9.2](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) or higher
@@ -46,7 +46,7 @@ class Item : Object {
 } 
 ```
 
-<center> <img src="Graphics/Barcodes-studio.png" /><br/>Barcode Demo</center><br>
+<center> <img src="Graphics/Barcodes-studio.png" /></center>
 
 
 ## Build Instructions
