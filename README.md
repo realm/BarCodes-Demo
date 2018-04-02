@@ -21,7 +21,7 @@
 
 - Get the `AVPreviewLayer` to correctly fill its enclosing view 
   
-- Add Item detail view using Eiureks to alow efiting of current item product descriptions
+- Add Item detail view using Eureka to alow editing of current item product descriptions
 
 ### Server Description
 
