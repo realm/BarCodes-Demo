@@ -2,6 +2,9 @@
 ### by David HM Spector <ds@realm.io>
 
 ## A Simple Barcode/QRCode Reader
+
+<center> <img src="Graphics/barcode-demo.png" width="310" height="552" /><br/>Barcode Demo</center><br>
+
 ### Requirements
 - [Xcode9.2](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) or higher
 - Swift 4.0 or higher
@@ -13,8 +16,15 @@
 
 
 
+#### Bugs / ToDo
+    - Fix `#Selector` unrecognized  issue with edting the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
 
-<center> <img src="Graphics/barcode-demo.png" width="310" height="552" /><br/>Barcode Demo</center><br>
+    - Get the `AVPreviewLayer` to correctly fill its enclosing view 
+  
+    - Add Item detail view using Eiureks to alow efiting of current item product descriptions
+  
+  
+  
 
 
 ### Server Description
