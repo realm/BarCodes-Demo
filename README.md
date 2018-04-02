@@ -15,6 +15,7 @@
 - [YARN](https://yarnpkg.com/en/) a faster nodejs dependency manager
 
 <hr>
+
 #### Bugs / ToDo
 
 - Fix `#Selector` issue which is throwing an unrecognized selector error when editing the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
