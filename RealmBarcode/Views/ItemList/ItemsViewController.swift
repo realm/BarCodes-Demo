@@ -113,4 +113,14 @@ class ItemsViewController: UIViewController {
         }
     } //notifcationTokenForCollection
     
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showScannerSegue" {
+            if let vc = segue.destination as? ScannerViewController {
+                vc.realm = realm
+            }
+        }
+    } // of prepareForSegue
+
 } // ItemsViewController
