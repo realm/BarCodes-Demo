@@ -30,7 +30,7 @@ As delivered this demo is designed to alow the user to utilize a ROS server on t
 
 ### Client Description
 
-The client is a simple `UITableView` based application that shows all known scanned object and allows the user to scan new objects for insertion into a synchronized  Realm database. The client operates on an extremely minimal data model  - just enough to capture the barcode, a description of the object and creation/modification dates:
+The client is a simple `UITableView` based application that shows all known scanned objects and allows the user to scan new objects for insertion into a synchronized Realm database. The client operates on an extremely minimal data model  - just enough to capture the barcode, a description of the object and creation/modification dates:
 
 ```swift
 class Item : Object {
@@ -45,7 +45,7 @@ class Item : Object {
     }
 } 
 ```
-
+These are stored in a Realm database - here shown viewed with Realm Studio:
 <center> <img src="Graphics/Barcodes-studio.png" /></center>
 
 
