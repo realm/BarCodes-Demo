@@ -13,7 +13,9 @@
 
 
 
-![BarcodeDemo ](/Graphics/barcode-demo.png)
+
+<center> <img src="Graphics/barcode-demo.png" width="310" height="552" /><br/>Barcode Demo</center><br>
+
 
 ### Server Description
 
