@@ -25,7 +25,7 @@
 
 ### Server Description
 
-1. As delivered this demo is designed to alow the user to utilize a ROS server on their local (buiold) machine and use an admin token in order to remove the need to write login logic for this simple example. This is accomplished by determining the local machine's IP addres at build time and storing the address in a file that is used to allow the client app to talk to the local server.
+1. As delivered this demo is designed to alow the user to utilize a ROS server on their local (build) machine. This is accomplished by determining the local machine's IP addres at build time and storing the address in a file that is used to allow the client app to talk to the local server. Additionally,  this demo server uses the Realm `Nickname` auth mechanism  in order to remove the need to write login logic for this simple example.
 
 2. In order to use a remote ROS server the lines 42-43 of the `Constants.swift` file should be modified to use the remote ROS IP address and the `ADMINTOKEN`  string shlud be usdated with the admin token fo the remote ROS server. 
 
@@ -62,7 +62,7 @@ Before attempting to install the ROS server locally, install NPM and NodeJS - in
   
   3.  Invoke the `yarn` (or `npm install`) to install all of the required packages
   
-  4.  Once this process completes the server can be started with `npm run`  - this process will stgart the local Realm Object Server amnd create a new "admin token" needed by te client app (how and where to install this is covered in the next section under `Building the Client`).
+  4.  Once this process completes the server can be started with `npm run`  - this process will stgart the local Realm Object Server ).
   
 ### Building the Client
 
@@ -72,11 +72,11 @@ Before attempting to install the ROS server locally, install NPM and NodeJS - in
   
   3. Once this process completes, open the `RealmBarcode.xcworkspace` file with Xcode
   
-  4. Navigate to the `Constants.swift` file; relace the `ADMINTOKEN` string with the contents of the file `barcode-server/data/keys/admin.json`.   This will be a very long base26 string; make sure it is correctly quoted and doesn't have any extraneous characters or line breaks.  Note: if you are using a remote ROS server you will need to get the admin token from the same location on your remote server and well as replace the server IP variable in the contants file witht he address of your remote ROS server.
+  4.  if you are using a remote ROS server you will need to get the admin token from the same location on your remote server and well as replace the server IP variable in the contants file witht he address of your remote ROS server.
   
   5. Connect an iPhone to the laptop, selecte i from the targe device menuy and press the `Build` button or press ⌘-R
   
   6. Once the app starts, tap the `+` button  in the navigation bar to start the scanner and point the camera at a barcode. 
   
-  7. Once a barcode is scanned a product detail page will be displayed (if the barcode is already in the Realm) or a New Item dialog allowing the user to enter a description is the itme scanned is new allowing hte user to insert the new item into the Realm.
+  7. Once a barcode is scanned either a product detail page will be displayed (if the barcode is already in the Realm) or a New Item dialog allowing the user to enter a description is the itme scanned is new allowing hte user to insert the new item into the Realm.
 
