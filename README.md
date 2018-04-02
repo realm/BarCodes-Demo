@@ -17,7 +17,7 @@
 
 
 #### Bugs / ToDo
-    - Fix `#Selector` unrecognized  issue with edting the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
+   - Fix `#Selector` unrecognized  issue with edting the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
 
     - Get the `AVPreviewLayer` to correctly fill its enclosing view 
   
