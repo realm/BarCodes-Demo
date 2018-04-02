@@ -147,6 +147,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             performSegue(withIdentifier: "showDetailSegue", sender: nil)
         } else {
             // show the found ID dialog; ask user if they wish to create a new record
+            self.stopScanning()
             self.showNewBarCodeAlert(withBarCode: result)
         }
     } // scanDidSucceed
@@ -166,7 +167,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                                                 preferredStyle: .alert)
         
         alertController.addTextField { (textField: UITextField) in
-            textField.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
+            textField.addTarget(self, action: #selector(ScannerViewController.textDidChange(_:)), for: .editingChanged)
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
             textField.autocorrectionType = .default
@@ -192,8 +193,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     } // presentNewBarcode
     
     
-    @objc func textDidChange(_ notification: NSNotification) {
-        let textField = notification.object as! UITextField
+    @objc func textDidChange(_ textField:UITextField) {
         AddAlertAction!.isEnabled = (textField.text?.count)! >= kMinItemNameLength
     } // textChanged
     

@@ -18,8 +18,6 @@
 
 #### Bugs / ToDo
 
-- Fix `#Selector` issue which is throwing an unrecognized selector error when editing the description for new items (seems to be a Swift4 v TargetAction/Selector thing)
-
 - Get the `AVPreviewLayer` to correctly fill its enclosing view 
   
 - Add Item detail view using Eureka to alow editing of current item product descriptions
