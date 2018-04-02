@@ -50,6 +50,10 @@ class ItemDetailViewController: FormViewController {
                 row.disabled = false
                 }.cellUpdate({ (cell, row) in
                     cell.textLabel?.textAlignment = .center
+                }).onChange({ (row) in
+                    try! self.realm?.write {
+                        self.itemRecord?.productDescription = row.value ?? ""
+                    }
                 })
         
             <<< DateRow(){ row in
