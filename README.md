@@ -76,4 +76,5 @@ Before attempting to install the ROS server locally, install NPM and NodeJS - in
   4. Navigate to the `Constants.swft` file; relace the `ADMINTOKEN` string with the contents of the file `barcode-server/data/keys/admin.json`.   This will be a very long base26 string; make sure it is correctly quoted and doesn't have any extraneous characters or line breaks.  Note: if you are using a remote ROS server you will need to get the admin token from the same location on your remote server and well as replace the server IP variable in the contants file witht he address of your remote ROS server.
   5. Connect an iPhone to the laptop, selecte i from the targe device menuy and press the `Build` button or press ⌘-R
   6. Once the app starts, tap the `+` button  in the navigation bar to start the scanner and point the camera at a barcode. 
+  7. Once a barcode is scanned a product detail page will be displayed (if the barcode is already in the Realm) or a New Item dialog allowing the user to enter a description is the itme scanned is new allowing hte user to insert the new item into the Realm.
 
