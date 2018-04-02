@@ -21,12 +21,16 @@ extension ItemsViewController: UITableViewDataSource {
         return self.items?.count ?? 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "default", for: indexPath) as UITableViewCell
-        let item = self.items![indexPath.row] 
-        cell.textLabel?.text = item.productDescription
-        cell.detailTextLabel?.text = "product ID: \(item.productDescription)"
+        let cell = tableView .dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        let item = self.items![indexPath.row]
+        cell.textLabel?.text = "product ID: \(item.id)"
+        cell.detailTextLabel?.text = item.productDescription
         return cell
     }
     
-}
+} // ItemsViewController

@@ -180,14 +180,16 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             .default, handler: { (_) -> Void in
                 let itemName = alertController.textFields!.first!.text ?? "New Item Name"
                 self.addnewItemWithID(barCode, productDescription: itemName)
-                
+                self.dismiss(animated: true, completion: nil)
         })
         
         self.AddAlertAction = addAction
         self.AddAlertAction?.isEnabled = false
         alertController.addAction(self.AddAlertAction!)
         
-        alertController.addAction(UIAlertAction(title: "Ignore", style: .cancel, handler:nil))
+        alertController.addAction(UIAlertAction(title: "Ignore", style: .cancel, handler:{ (_) -> Void in
+            self.startScanning()
+        }))
         
         present(alertController, animated: true, completion: nil)
     } // presentNewBarcode
@@ -199,7 +201,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     
     func addnewItemWithID(_ barCode: String, productDescription: String){
-        guard self.realm != nil else { return }
+        guard self.realm != nil else {
+            print("Realm was nil!!")
+            return
+            
+        }
         
         try! realm?.write {
             let tmpDate = Date()
