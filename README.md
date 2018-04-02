@@ -48,7 +48,6 @@ class Item : Object {
 
 <center> <img src="Graphics/Barcodes-studio.png" /><br/>Barcode Demo</center><br>
 
-The bulk of the app is dedicated to showing already captured  objects and allowing the user to scan and incorporate new objects into the Realm.
 
 ## Build Instructions
 
