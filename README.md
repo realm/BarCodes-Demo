@@ -60,9 +60,9 @@ Before attempting to install the ROS server locally, install NPM and NodeJS - in
   
   2. Change directory to the `barcode-server` directory; this contains a preconfigured version of the Realm Object Server
   
-  3.  Invoke the `yarn` (or `npm install`) to install all of the required packages
+  3.  Invoke the `yarn` (or `npm install`) command to install all of the required packages
   
-  4.  Once this process completes the server can be started with `npm run`  - this process will start the local Realm Object Server ).
+  4.  Once this process completes the server can be started with `npm run`  - this process will start the local Realm Object Server).
   
 ### Building the Client
 
