@@ -35,16 +35,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     var foundID = ""    // the most current bar/qr code we've scanned
     
-    // the green frame we display around the barcode windown on a successful scan
-    let codeFrame : UIView = {
-        let codeFrame = UIView()
-        codeFrame.layer.borderColor = UIColor.green.cgColor
-        codeFrame.layer.borderWidth = 2
-        codeFrame.frame = CGRect.zero
-        codeFrame.translatesAutoresizingMaskIntoConstraints = false
-        return codeFrame
-    }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,7 +120,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     // AVFoundation / Barcode utils
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects.count == 0 {
-            codeFrame.frame = CGRect.zero
+            self.scannerView.layer.borderColor = UIColor.clear.cgColor
             return
         }
         
@@ -138,10 +128,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         guard let stringCodeValue = metadataObject.stringValue else { return }
         
-        //        codeFrame.bounds = scannerView.bounds
-        codeFrame.bounds = videoPreviewLayer!.bounds
-        view.addSubview(codeFrame)
-        
+        self.scannerView.layer.borderColor = UIColor.green.cgColor
+        self.scannerView.layer.borderWidth = 3
         guard let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) else { return }
         
         scanDidSucceed(result: stringCodeValue)
