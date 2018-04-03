@@ -26,10 +26,11 @@ extension ItemsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView .dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ItemCell")
         let item = self.items![indexPath.row]
-        cell.textLabel?.text = "product ID: \(item.id)"
-        cell.detailTextLabel?.text = item.productDescription
+        cell.detailTextLabel?.text = "product ID: \(item.id)"
+        cell.textLabel?.text = item.productDescription
         return cell
     }
     
