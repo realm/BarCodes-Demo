@@ -18,7 +18,7 @@
 
 #### Bugs / ToDo
 
--[ ]  Get the `AVPreviewLayer` to correctly fill its enclosing view 
+- [ ]  Get the `AVPreviewLayer` to correctly fill its enclosing view 
   
 <hr>
 
