@@ -166,14 +166,14 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
             textField.autocorrectionType = .default
-            textField.placeholder = "Name for this item..."
+            textField.placeholder = NSLocalizedString("Name for this item...", comment: "Name for this item...")
             textField.clearButtonMode = .whileEditing
         }
         
         
-        let addAction = UIAlertAction(title: "Add", style:
+        let addAction = UIAlertAction(title: NSLocalizedString("Add", comment: ""), style:
             .default, handler: { (_) -> Void in
-                let itemName = alertController.textFields!.first!.text ?? "New Item Name"
+                let itemName = alertController.textFields!.first!.text ?? NSLocalizedString("New Item Name", comment:"New Item Name")
                 self.addnewItemWithID(barCode, productDescription: itemName)
                 self.dismiss(animated: true, completion: nil)
         })
@@ -182,7 +182,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         self.AddAlertAction?.isEnabled = false
         alertController.addAction(self.AddAlertAction!)
         
-        alertController.addAction(UIAlertAction(title: "Ignore", style: .cancel, handler:{ (_) -> Void in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Ignore", comment: ""), style: .cancel, handler:{ (_) -> Void in
             self.startScanning()
         }))
         
