@@ -14,13 +14,7 @@
 - [NPM and nodejs](https://www.npmjs.com/get-npm)
 - [YARN](https://yarnpkg.com/en/) a faster nodejs dependency manager
 
-<hr>
 
-#### Bugs / ToDo
-
-- [ ]  Get the `AVPreviewLayer` to correctly fill its enclosing view 
-  
-<hr>
 
 ### Server Description
 

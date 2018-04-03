@@ -63,6 +63,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     } // viewDidLoad
     
     
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.videoPreviewLayer?.frame = self.scannerView.bounds
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         stopScanning()
         startScanning()
