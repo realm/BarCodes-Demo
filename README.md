@@ -20,7 +20,6 @@
 
 - Get the `AVPreviewLayer` to correctly fill its enclosing view 
   
-- Add Item detail view using Eureka to allow editing of current item product descriptions
 <hr>
 
 ### Server Description
